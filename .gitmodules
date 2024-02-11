@@ -1,0 +1,3 @@
+[submodule "src/what_transformer_looked_at/transformers"]
+	path = src/what_transformer_looked_at/transformers
+	url = https://github.com/huggingface/transformers.git
