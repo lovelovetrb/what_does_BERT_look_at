@@ -1,0 +1,11 @@
+basic:
+  seed: 42
+  model_name: "cl-tohoku/bert-base-japanese"
+  # model_name: "rinna/japanese-gpt-neox-3.6b"
+  ##### Prod #####
+  data_path: "src/what_transformer_looked_at/data/text/deps/"
+  save_file_dir: "src/what_transformer_looked_at/data/csv/deps-norms/"
+  ##### Test #####
+  # data_path: "src/what_transformer_looked_at/data/text/test/"
+  # save_file_dir: "src/what_transformer_looked_at/data/csv/test/"
+  save_fig_dir: "src/what_transformer_looked_at/fig/"
