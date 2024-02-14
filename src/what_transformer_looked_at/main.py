@@ -99,7 +99,7 @@ if __name__ == "__main__":
         "--mode",
         type=str,
         required=True,
-        choices=["attention_weights","norms"] 
+        choices=["attention_weights","norms","norms_abs"] 
     )
     args = parser.parse_args()
     main(args)
