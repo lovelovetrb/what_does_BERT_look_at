@@ -14,6 +14,9 @@ wandb/
 src/what_transformer_looked_at/data/
 src/what_transformer_looked_at/fig/
 src/what_transformer_looked_at/fig_hist/
+src/what_transformer_looked_at/config.yaml
+
+run_calc.sh
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,macos,linux
