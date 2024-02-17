@@ -20,7 +20,7 @@ def read_file_for_dir(dir_path: str):
     return file_list
 
 
-# @notify(token, debug=True, ploject_name="what transformer looked at")
+@notify(token, debug=False, project_name="what transformer looked at")
 def main(args):
     os.environ["CUDA_VISIBLE_DEVICES"] = ",".join([str(i) for i in args.visible_gpu])
 

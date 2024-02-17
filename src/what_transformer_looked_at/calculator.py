@@ -92,8 +92,6 @@ class Calculator:
 
         norms1 = output1.norms
         norms2 = output2.norms
-
-        
         
         pair_diff_list = []
         for l in range(self.layer_num):
@@ -112,11 +110,11 @@ class Calculator:
                     if self.args.mode == "norms_abs":
                         token_indices1 = data["s1_tok"].input_ids.squeeze(0).squeeze(0)
                         token_indices2 = data["s2_tok"].input_ids.squeeze(0).squeeze(0)
-                        abs_head_norms1, abs_head_norms2 = self.sort_in_abs_pos_in_list(
+                        head_norms1, head_norms2 = self.sort_in_abs_pos_in_list(
                             head_norms1, head_norms2, token_indices1, token_indices2
                         )
 
-                    diff = self.calc_diff(abs_head_norms1, abs_head_norms2) 
+                    diff = self.calc_diff(head_norms1, head_norms2) 
 
                 diff = diff.cpu().numpy()
                 pair_diff_list.append(diff)
@@ -152,10 +150,10 @@ class Calculator:
         
         sorted_indices1 = torch.argsort(token_indices1)
         sorted_indices2 = torch.argsort(token_indices2)
-
+        
         sorted_attention1 = torch.index_select(attention1, 0, sorted_indices1)
         sorted_attention2 = torch.index_select(attention2, 0, sorted_indices2)
-        
+                
         return sorted_attention1, sorted_attention2
 
     def calc_in_absolute_position_in_queue(self, attention1, attention2, sorted_indices1:list[int], sorted_indices2:list[int]):
