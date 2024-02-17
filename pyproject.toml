@@ -19,7 +19,7 @@ dependencies = [
     "einops>=0.7.0",
     "matplotlib>=3.7.4",
     "pandas>=2.0.3",
-    "transformers @ file:///disk/ssd14tc/mbaba/dev/python/what_transformer_looked_at/src/what_transformer_looked_at/transformers",
+    "transformers @ file:///diskthalys/ssd14tc/mbaba/dev/python/what_transformer_looked_at/src/what_transformer_looked_at/transformers",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
